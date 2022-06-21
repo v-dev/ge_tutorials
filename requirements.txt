@@ -1,0 +1,2 @@
+great_expectations==0.15.10
+pgcli==3.4.1

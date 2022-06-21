@@ -1,0 +1,16 @@
+========== ubuntu setup ==========
+https://humberto.io/blog/tldr-python-dev-dependencies-on-ubuntu
+
+sudo apt install -y install libpq-dev
+### rest may not be needed ###
+sudo apt install -y dpkg-dev build-essential
+sudo apt install -y python3-dev
+========== ubuntu setup ==========
+
+virtualenv --python python3 venv
+source venv/bin/activate
+pip install --upgrade pip
+pip install -r requirements.txt
+
+docker network create pgresnet
+docker run --network pgresnet -p5555:5432 --name pgres -e POSTGRES_PASSWORD=pass -d postgres
